@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Meil - Bootstrap 5 Admin Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Include SheetJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid position-relative d-flex p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Sidebar Start -->
+      <div class="sidebar pe-4 pb-3">
+        <nav class="navbar bg-secondary navbar-dark">
+          <a href="index.html" class="navbar-brand mx-4 mb-3">
+            <h3 class="text-primary">
+              <i class="fa fa-user-edit me-2"></i>Meil
+            </h3>
+          </a>
+          <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+              <img
+                class="rounded-circle"
+                src="img/user.jpg"
+                alt=""
+                style="width: 40px; height: 40px"
+              />
+              <div
+                class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
+              ></div>
+            </div>
+            <div class="ms-3">
+              <h6 class="mb-0">Tabrez Alam</h6>
+              <span>Admin</span>
+            </div>
+          </div>
+          <div class="navbar-nav w-100">
+            <a href="index.html" class="nav-item nav-link"
+              ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
+            >
+            <div class="nav-item dropdown">
+              <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a> -->
+              <div class="dropdown-menu bg-transparent border-0">
+                <a href="button.html" class="dropdown-item">Buttons</a>
+                <a href="typography.html" class="dropdown-item">Typography</a>
+                <a href="element.html" class="dropdown-item">Other Elements</a>
+              </div>
+            </div>
+            <a href="table.html" class="nav-item nav-link active"
+              ><i class="fa fa-table me-2"></i>Tables</a
+            >
+            <div class="nav-item dropdown">
+              <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a> -->
+              <div class="dropdown-menu bg-transparent border-0">
+                <a href="signin.html" class="dropdown-item">Sign In</a>
+                <a href="signup.html" class="dropdown-item">Sign Up</a>
+                <a href="404.html" class="dropdown-item">404 Error</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Sidebar End -->
+
+      <!-- Content Start -->
+      <div class="content">
+        <!-- Navbar Start -->
+        <nav
+          class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0"
+        >
+          <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+            <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+          </a>
+          <a href="#" class="sidebar-toggler flex-shrink-0">
+            <i class="fa fa-bars"></i>
+          </a>
+          <form class="d-none d-md-flex ms-4">
+            <input
+              class="form-control bg-dark border-0"
+              type="search"
+              placeholder="Search"
+            />
+          </form>
+          <div class="navbar-nav align-items-center ms-auto">
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa fa-envelope me-lg-2"></i>
+                <span class="d-none d-lg-inline-flex">Message</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="#" class="dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle"
+                      src="img/user.jpg"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div class="ms-2">
+                      <h6 class="fw-normal mb-0">Tabrez send you a message</h6>
+                      <small>15 minutes ago</small>
+                    </div>
+                  </div>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle"
+                      src="img/user.jpg"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div class="ms-2">
+                      <h6 class="fw-normal mb-0">Tabrez send you a message</h6>
+                      <small>15 minutes ago</small>
+                    </div>
+                  </div>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle"
+                      src="img/user.jpg"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div class="ms-2">
+                      <h6 class="fw-normal mb-0">Tabrez send you a message</h6>
+                      <small>15 minutes ago</small>
+                    </div>
+                  </div>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item text-center"
+                  >See all message</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa fa-bell me-lg-2"></i>
+                <span class="d-none d-lg-inline-flex">Notificatin</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="#" class="dropdown-item">
+                  <h6 class="fw-normal mb-0">Profile updated</h6>
+                  <small>15 minutes ago</small>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">
+                  <h6 class="fw-normal mb-0">New user added</h6>
+                  <small>15 minutes ago</small>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">
+                  <h6 class="fw-normal mb-0">Password changed</h6>
+                  <small>15 minutes ago</small>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item text-center"
+                  >See all notifications</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle me-lg-2"
+                  src="img/user.jpg"
+                  alt=""
+                  style="width: 40px; height: 40px"
+                />
+                <span class="d-none d-lg-inline-flex">Tabrez Alam</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="#" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <a href="signin.html" class="dropdown-item">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Table Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Observation Table</h6>
+                <!-- Download Button -->
+                <button id="downloadExcel" class="btn btn-primary mb-3">
+                  Download Excel
+                </button>
+                <div class="table-responsive">
+                  <table class="table" id="observationsTable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Responsible-Person</th>
+                        <th scope="col">Observation</th>
+                        <th scope="col">Select</th>
+                        <th scope="col">Corrective Action</th>
+                        <th scope="col">Actions</th>
+                        <!-- New column for actions -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John Doe</td>
+                        <td>Shoe</td>
+                        <td>23-03-2025</td>
+                        <td>Bhopal</td>
+                        <td>Aman Shaikh</td>
+                        <td>without Shoes</td>
+                        <td>U.A</td>
+                        <td>Fine 200</td>
+                        <td>
+                          <button class="btn btn-sm btn-warning update-btn">
+                            Update
+                          </button>
+                          <button
+                            class="btn btn-sm btn-danger delete-btn"
+                            data-id="1"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Jane Doe</td>
+                        <td>Helmet</td>
+                        <td>24-03-2025</td>
+                        <td>Indore</td>
+                        <td>Rahul Sharma</td>
+                        <td>without Helmet</td>
+                        <td>U.C</td>
+                        <td>Fine 500</td>
+                        <td>
+                          <button class="btn btn-sm btn-warning update-btn">
+                            Update
+                          </button>
+                          <button
+                            class="btn btn-sm btn-danger delete-btn"
+                            data-id="2"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Table End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="bg-secondary rounded-top p-4">
+            <div class="row">
+              <div class="col-12 col-sm-6 text-center text-sm-start">
+                &copy;
+                <a href="https://www.instagram.com/mdaman9939/">Md Aman</a>, All
+                Right Reserved.
+              </div>
+              <div class="col-12 col-sm-6 text-center text-sm-end">
+                Designed By
+                <a href="https://mdamanportfolio.netlify.app/">Md Aman</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer End -->
+      </div>
+      <!-- Content End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <script>
+      // Check token on page load
+      const token = sessionStorage.getItem("token"); // Use sessionStorage
+
+      if (!token) {
+        // Redirect to login page if token is missing
+        window.location.href = "signin.html";
+      }
+
+      // Logout functionality
+      function logout() {
+        sessionStorage.removeItem("token"); // Clear token from sessionStorage
+        window.location.href = "signin.html"; // Redirect to login page
+      }
+
+      // Hide spinner after page load
+      window.onload = function () {
+        document.getElementById("spinner").style.display = "none"; // Hide spinner
+      };
+
+      // Fetch data from the API
+      fetch("https://tabrezserver1.vercel.app//api/observations")
+        .then((response) => response.json())
+        .then((data) => {
+          const tableBody = document.querySelector("#observationsTable tbody");
+          tableBody.innerHTML = ""; // Clear any existing rows
+
+          data.observations.forEach((obs) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                    <td>${obs.name}</td>
+                    <td>${obs.designation}</td>
+                    <td>${new Date(obs.date).toLocaleDateString()}</td>
+                    <td>${obs.location}</td>
+                    <td>${obs.responsiblePerson}</td>
+                    <td>${obs.observation}</td>
+                    <td>${obs.category}</td>
+                    <td>${obs.correctiveAction}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning update-btn" data-id="${
+                          obs._id
+                        }">Update</button>
+                        <button class="btn btn-sm btn-danger delete-btn" data-id="${
+                          obs._id
+                        }">Delete</button>
+                    </td>
+                `;
+            tableBody.appendChild(row);
+          });
+
+          // Add event listeners for update and delete buttons
+          addEventListeners();
+        })
+        .catch((error) => console.error("Error fetching data:", error));
+
+      // Download excel file
+      document
+        .getElementById("downloadExcel")
+        .addEventListener("click", function () {
+          const table = document.getElementById("observationsTable");
+          const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+          const worksheet = workbook.Sheets["Sheet1"];
+          const range = XLSX.utils.decode_range(worksheet["!ref"]);
+
+          // Ensure date column (3rd column, index 2) has correct formatting
+          for (let R = range.s.r + 1; R <= range.e.r; ++R) {
+            const cellAddress = { c: 2, r: R }; // Target Date column (index 2)
+            const cellRef = XLSX.utils.encode_cell(cellAddress);
+
+            if (worksheet[cellRef]) {
+              let dateValue = worksheet[cellRef].v;
+
+              // Ensure it's a valid date
+              if (!isNaN(Date.parse(dateValue))) {
+                const dateObj = new Date(dateValue);
+
+                // Format date as "DD-MM-YYYY"
+                const formattedDate = `${dateObj
+                  .getDate()
+                  .toString()
+                  .padStart(2, "0")}-${(dateObj.getMonth() + 1)
+                  .toString()
+                  .padStart(2, "0")}-${dateObj.getFullYear()}`;
+
+                // Set the cell's value and formatting
+                worksheet[cellRef].v = formattedDate;
+                worksheet[cellRef].t = "s"; // Force cell to text type to prevent Excel mishandling
+              }
+            }
+          }
+
+          // Auto-adjust column width
+          worksheet["!cols"] = [
+            { width: 15 },
+            { width: 15 },
+            { width: 15 },
+            { width: 15 },
+            { width: 15 },
+            { width: 15 },
+            { width: 15 },
+          ];
+
+          // Export file
+          XLSX.writeFile(workbook, "Observations.xlsx");
+        });
+
+      // Add event listeners for update and delete buttons
+      function addEventListeners() {
+        // Delete functionality
+        document.querySelectorAll(".delete-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const observationId = this.getAttribute("data-id"); // Get the observation ID
+            console.log("Observation ID:", observationId); // Debugging: Log the observation ID
+
+            if (!observationId) {
+              console.error("Observation ID is undefined or null.");
+              alert("Error: Observation ID is missing.");
+              return;
+            }
+
+            if (confirm("Are you sure you want to delete this observation?")) {
+              fetch(
+                `https://tabrezserver1.vercel.app//api/observations/${observationId}`,
+                {
+                  method: "DELETE",
+                  headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                  },
+                }
+              )
+                .then((response) => {
+                  if (response.ok) {
+                    const row = this.closest("tr"); // Get the row to delete
+                    row.remove(); // Remove the row from the table
+                    alert("Observation deleted successfully!");
+                  } else {
+                    alert("Failed to delete observation.");
+                  }
+                })
+                .catch((error) =>
+                  console.error("Error deleting observation:", error)
+                );
+            }
+          });
+        });
+
+        // Update functionality
+        // Update functionality
+        document.querySelectorAll(".update-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const row = this.closest("tr");
+            const cells = row.querySelectorAll("td");
+            const observationId = this.getAttribute("data-id");
+
+            // ✅ Convert cell content into editable inputs
+            if (this.innerText === "Update") {
+              cells.forEach((cell, index) => {
+                if (index !== cells.length - 1) {
+                  const currentValue = cell.innerText.trim();
+                  const input = document.createElement("input");
+                  input.type = "text";
+                  input.value = currentValue;
+                  cell.innerText = "";
+                  cell.appendChild(input);
+                }
+              });
+
+              this.innerText = "Save";
+              this.classList.remove("btn-warning");
+              this.classList.add("btn-success");
+            }
+
+            // ✅ Save Updated Data
+            this.addEventListener(
+              "click",
+              function saveHandler() {
+                if (this.innerText === "Save") {
+                  const updatedData = {
+                    name: cells[0].querySelector("input")?.value.trim() || "",
+                    designation:
+                      cells[1].querySelector("input")?.value.trim() || "",
+                    date: cells[2].querySelector("input")?.value.trim() || "",
+                    location:
+                      cells[3].querySelector("input")?.value.trim() || "",
+                    responsiblePerson:
+                      cells[4].querySelector("input")?.value.trim() || "",
+                    observation:
+                      cells[5].querySelector("input")?.value.trim() || "",
+                    category:
+                      cells[6].querySelector("input")?.value.trim() || "",
+                    correctiveAction:
+                      cells[7].querySelector("input")?.value.trim() || "",
+                  };
+
+                  console.log("✅ Payload to send:", updatedData);
+
+                  // ✅ Send Updated Data to API
+                  fetch(
+                    `https://tabrezserver1.vercel.app//api/observations/${observationId}`,
+                    {
+                      method: "PUT",
+                      headers: {
+                        Authorization: `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(updatedData),
+                    }
+                  )
+                    .then((response) => response.json())
+                    .then((data) => {
+                      if (data.message === "Observation updated") {
+                        cells.forEach((cell, index) => {
+                          if (index !== cells.length - 1) {
+                            const input = cell.querySelector("input");
+                            cell.innerText = input.value.trim(); // ✅ Final value saved
+                          }
+                        });
+
+                        // ✅ Button back to "Update"
+                        this.innerText = "Update";
+                        this.classList.remove("btn-success");
+                        this.classList.add("btn-warning");
+
+                        alert("Observation updated successfully!");
+                      } else {
+                        alert("Failed to update observation.");
+                      }
+                    })
+                    .catch((error) =>
+                      console.error("Error updating observation:", error)
+                    );
+
+                  // 🔥 Ensure Save handler triggers only once
+                  this.removeEventListener("click", saveHandler);
+                }
+              },
+              { once: true }
+            );
+          });
+        });
+      }
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
